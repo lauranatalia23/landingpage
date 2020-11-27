@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:460px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: inline;
+}
+
+.nav {
+  overflow: auto;
+  background-color: #206a5d;
+  position: sticky;
+  top: 0;
+  font-family: 'Work Sans', serif;
+  text-transform: uppercase;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  background-color: #bfdcae;
+  color: black;
+}
+
+.nav a.active {
+  background-color: #81b214;
+  color: white;
+}
+
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {
+    display: none;
+  }
+
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+main {
+  overflow: auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#welcome {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../images/city.jpg');
+  background-size: cover;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  /* properti lainnya */
+  padding: 20px;
+  margin: 5px;
+}
+
+.box,
+.box-card {
+  flex: 1 1 700px;
+  /* properti lainnya */
+  margin: 5px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#section-sejarah,
+#section-geografis {
+  padding: 40px;
+  text-align: center;
+  flex: 1 1 200px;
+  margin-top: 40px;
+}
+
+.features-images {
+  max-width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#content-sejarah {
+  padding: 40px 90px 40px 0;
+  font-size: 18px;
+  text-align: justify;
+  color: #54595f;
+  line-height: 30px;
+}
+
+#content-sejarah h2 {
+  color: #000000;
+  text-transform: uppercase;
+}
+
+#wisata {
+  padding: 100px;
+  margin: 0;
+  background-color: #f1f1e8;
+}
+
+#section-wisata {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 2000px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  margin-bottom: 30px;
+}
+
+#section-wisata h2 {
+  color: #000;
+  font-size: 32px;
+  margin: 0;
+}
+
+#section-wisata p {
+  font-size: 18px;
+  text-transform: none;
+  font-style: italic;
+  margin: 0;
+}
+
+.flex-card {
+  flex: 1 1 300px;
+  margin: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+article h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.images-wisata {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.caption {
+  padding: 5px 30px;
+}
+
+.images-geografis {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#content-geografis {
+  padding: 40px 90px 40px 0;
+  font-size: 18px;
+  text-align: justify;
+  color: #54595f;
+  line-height: 30px;
+}
+
+#content-geografis h2 {
+  color: #000;
+  text-transform: uppercase;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profil header {
+  text-align: center;
+}
+
+.profil h2 {
+  text-transform: uppercase;
+  font-family: 'Work Sans', serif;
+}
+
+.profil img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.card {
+  margin: 0px 10px;
+  height: 400px;
+  background-color: #bfdcae;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+}
+
+.profil figcaption {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-family: 'Work Sans', serif;
+}
+
+.links {
+  display: inline-flex;
+  position: absolute;
+  margin: auto 80px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.link {
+  height: 28px;
+  width: 28px;
+  margin: 4px;
+}
+
+.link:hover {
+  animation: fadeIn 0.7s;
+}
+
+@media screen and (max-width: 450px) {
+  .links {
+    margin: 10px 40px;
+  }
+
+  .card {
+    height: 350px;
+  }
+}
+
+#first {
+  background: url("../images/linkedin.svg");
+  background-size: cover;
+  margin: 10px;
+}
+
+#second {
+  background: url("../images/github.svg");
+  background-size: cover;
+  margin: 10px;
+}
+
+#third {
+  background: url("../images/email.svg");
+  background-size: cover;
+  margin: 10px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #206a5d;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'Cardo', serif;
+}
+
+@media screen and (max-width: 540px) {
+  #section-wisata h2 {
+    font-size: 20px;
+  }
+
+  #section-wisata p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  #welcome {
+    height: 50vh;
+  }
+
+  #content-sejarah h2 {
+    text-align: left;
+  }
+
+  #content-geografis {
+    padding: 40px;
+  }
+
+  #content-geografis h2 {
+    text-align: center;
+  }
+
+  .box {
+    flex: 1 1 600px;
+  }
+
+  .flex-card {
+    flex: 1 1 200px;
+    padding-bottom: 20px;
+  }
+
+  article h3 {
+    font-size: 18px;
+  }
+
+  .caption {
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+
+  .flex-column>#wisata {
+    padding: 60px;
+  }
+
+  #section-wisata h2 {
+    font-size: 24px;
+  }
+
+  #section-wisata p {
+    font-size: 14px;
+  }
+
+  .box-card {
+    flex: 1 1 800px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #content-sejarah {
+    text-align: center;
+    padding: 0 20px 30px;
+    font-size: 16px;
+  }
+
+  #content-sejarah h2,
+  #content-geografis h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  #content-geografis {
+    padding: 0 30px 30px;
+    font-size: 16px;
+  }
+
+  .features-images {
+    margin-top: 0;
+  }
+
+  .flex-row {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .flex-card {
+    flex: 1 1 400px;
+  }
+
+  .flex-column>#wisata {
+    padding: 30px;
+  }
+}
